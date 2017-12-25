@@ -1,0 +1,22 @@
+<app-server></app-server>
+
+
+<p>server with {{'server ids'}} = {{getServerId()}}</p>
+<p>see if c changes {{c}}</p>
+<p>{{serverCreationStatus}}</p>
+
+<button class="btn btn-primary" (click)="onCreateServer()">ADD SERVER</button>
+
+
+
+
+
+<input type="text" class="form-control" [(ngModel)]="userName"/>
+<p *ngIf="serverCreated; else noServer">server iss created ,the name of the server is {{userName}}</p>
+<ng-template #noServer>
+    <p>no server was created</p>
+</ng-template>
+    
+    <button class="btn btn-primary" [disabled]="func()" (click)="clearAll()">clearButton</button>
+
+   

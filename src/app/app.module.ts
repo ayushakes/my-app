@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import{FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-
+import{ServerComponent} from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
+import{SuccessAlerts} from './SuccessAlerts/s.component';
+import{WarningAlerts} from './WarningAlerts/w.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,ServerComponent, ServersComponent,SuccessAlerts,WarningAlerts
   ],
-  imports: [
+  imports: [ FormsModule,
     BrowserModule
   ],
   providers: [],

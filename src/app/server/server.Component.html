@@ -1,0 +1,9 @@
+<h3>i am in servercomponenthtml and i am the server component</h3>
+<p  [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:serverStatus==='online'}" [ngClass]="{offline:serverStatus==='offline'}"   > {{'server'}} w  ith ID {{serverId}} and servername {{serverName}} is {{getServerStatus()}}</p>
+
+
+
+<button class="btn btn-primary" (click)="togglePara()">toggle</button>
+
+<input type='text' class="forms-control" [(ngModel)]="paraName"/>
+<p *ngFor="let logItem of log" [ngStyle]="{color:logItem>=10?'red':'green'}">{{logItem}}</p>
